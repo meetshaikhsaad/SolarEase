@@ -1,2 +1,16 @@
-# SolarEase
-SolarEase is a comprehensive mobile app for adopting solar energy in Pakistan. It offers solar product purchasing, service booking (installation, cleaning), a watt calculator, AI chatbot, live tracking, energy savings tracker, and multilingual support. Built with Flutter, Node.js, and PostgreSQL.
+# solarease
+
+A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
