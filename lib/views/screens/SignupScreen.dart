@@ -1,7 +1,7 @@
-import '../../helpers/ExportImports.dart';
+import '../../helpers/ExportImports.dart';// Import your colors.dart (adjust path if needed)
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(height: 16),
                 // Title
                 const Text(
-                  "SolarEase",
+                  'SolarEase',
                   style: TextStyle(
                     color: NeutralLightColor, // White
                     fontSize: 28,
@@ -48,13 +48,51 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(height: 4),
                 // Subtitle
                 const Text(
-                  "Smart Solar Solutions",
+                  'Smart Solar Solutions',
                   style: TextStyle(
                     color: PrimaryLightColor, // Light gray
                     fontSize: 16,
                   ),
                 ),
                 const SizedBox(height: 48),
+                // First Name Input
+                TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: PrimaryColor, // Dark input fill
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide.none,
+                    ),
+                    prefixIcon: const Icon(
+                      Icons.person,
+                      color: PrimaryLightColor, // Gray icon
+                    ),
+                    hintText: 'First Name',
+                    hintStyle: const TextStyle(color: PrimaryLightColor), // Gray hint
+                  ),
+                  style: const TextStyle(color: NeutralLightColor), // White input text
+                ),
+                const SizedBox(height: 16),
+                // Last Name Input
+                TextField(
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: PrimaryColor, // Dark input fill
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide.none,
+                    ),
+                    prefixIcon: const Icon(
+                      Icons.person_outline,
+                      color: PrimaryLightColor, // Gray icon
+                    ),
+                    hintText: 'Last Name',
+                    hintStyle: const TextStyle(color: PrimaryLightColor), // Gray hint
+                  ),
+                  style: const TextStyle(color: NeutralLightColor), // White input text
+                ),
+                const SizedBox(height: 16),
                 // Email Input
                 TextField(
                   decoration: InputDecoration(
@@ -93,31 +131,32 @@ class LoginScreen extends StatelessWidget {
                   ),
                   style: const TextStyle(color: NeutralLightColor), // White input text
                 ),
-                const SizedBox(height: 8),
-                // Forgot Password
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    onPressed: () {
-                      Get.to(() => const ForgotPasswordScreen());
-                    }, // Add navigation logic
-                    child: const Text(
-                      'Forgot Password?',
-                      style: TextStyle(
-                        color: SecondaryLightColor, // Yellow
-                        fontSize: 14,
-                      ),
-                    ),
-                  ),
-                ),
                 const SizedBox(height: 16),
-                // Login Button with glow
+                // Confirm Password Input
+                TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: PrimaryColor, // Dark input fill
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide.none,
+                    ),
+                    prefixIcon: const Icon(
+                      Icons.lock_outline,
+                      color: PrimaryLightColor, // Gray icon
+                    ),
+                    hintText: 'Confirm Password',
+                    hintStyle: const TextStyle(color: PrimaryLightColor), // Gray hint
+                  ),
+                  style: const TextStyle(color: NeutralLightColor), // White input text
+                ),
+                const SizedBox(height: 32),
+                // Sign Up Button with glow
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {
-                      Get.offAll(() => const DashboardScreen());
-                    }, // Add login logic
+                    onPressed: () {}, // Add sign up logic
                     style: ElevatedButton.styleFrom(
                       backgroundColor: SecondaryLightColor, // Yellow button
                       padding: const EdgeInsets.symmetric(vertical: 16),
@@ -128,7 +167,7 @@ class LoginScreen extends StatelessWidget {
                       elevation: 10, // For glow
                     ),
                     child: const Text(
-                      'Login',
+                      'Sign Up',
                       style: TextStyle(
                         color: NeutralDarkColor, // Black text on button
                         fontSize: 18,
@@ -138,12 +177,12 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 16),
-                // Sign Up Link
+                // Login Link
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const Text(
-                      "Don't have an account? ",
+                      'Already have an account? ',
                       style: TextStyle(
                         color: PrimaryLightColor, // Gray
                         fontSize: 14,
@@ -151,10 +190,10 @@ class LoginScreen extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        Get.to(() => const SignupScreen());
-                      }, // Add sign up navigation
+                        Get.back(); // Navigate back to LoginScreen
+                      }, // Add login navigation
                       child: const Text(
-                        'Sign Up',
+                        'Login',
                         style: TextStyle(
                           color: SecondaryLightColor, // Yellow
                           fontSize: 14,
