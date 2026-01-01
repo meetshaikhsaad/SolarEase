@@ -24,3 +24,4 @@ export 'package:solarease/views/screens/DashboardScreen.dart';
 export 'package:solarease/views/screens/ShopScreen.dart';
 export 'package:solarease/views/screens/CalculateScreen.dart';
 export 'package:solarease/views/screens/ProfileScreen.dart';
+export 'package:solarease/views/screens/ServiceScreen.dart';

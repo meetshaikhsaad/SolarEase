@@ -13,11 +13,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
   // Placeholder pages (you can replace with actual screens later)
   static const List<Widget> _pages = [
     Center(child: Text('Dashboard', style: TextStyle(fontSize: 32, color: Colors.white))),
-    const ShopScreen(),
-    const CalculateScreen(),
-    Center(child: Text('Services', style: TextStyle(fontSize: 32, color: Colors.white))),
+    ShopScreen(),
+    CalculateScreen(),
+    ServicesScreen(),
     Center(child: Text('Chat', style: TextStyle(fontSize: 32, color: Colors.white))),
-    const ProfileScreen()
+    ProfileScreen()
   ];
 
   void _onItemTapped(int index) {
